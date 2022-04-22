@@ -1,0 +1,26 @@
+{% extends 'base-back.html.twig' %}
+
+{% block title %}Codepromo{% endblock %}
+
+{% block body %}
+    <h1>Codepromo</h1>
+
+    <table class="table table-bordered" id="t"  width="100%" cellspacing="0">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ codepromo.id }}</td>
+            </tr>
+            <tr>
+                <th>Code</th>
+                <td>{{ codepromo.code }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('codepromo_index') }}">back to list</a>
+
+    <a href="{{ path('codepromo_edit', {'id': codepromo.id}) }}">edit</a>
+
+    {{ include('codepromo/_delete_form.html.twig') }}
+{% endblock %}

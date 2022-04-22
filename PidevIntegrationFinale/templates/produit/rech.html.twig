@@ -1,0 +1,29 @@
+<h2 Rech des produits</h2>
+
+<form method="post">
+<input type="text" name="nom">
+    <input type="submit" value="recherche"
+
+
+</form>
+
+<table class="table" border="2" >
+    <tbody>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Image</th>
+    </tr>
+    {% for produit in produits %}
+    <tr>
+        <td>{{ produit.id }}</td>
+        <td>{{ produit.nom }}</td>
+        <td>{{ produit.description }}</td>
+        <td>{{ produit.prix }}</td>
+        <td><img width="64px" height="64px" src="{{ produit.image }}"/></td>
+        <td><a href="/admin/produit/delete/{{ produit.id }}">Delete</a></td>
+        <td><a href="/admin/produit/mod/{{ produit.id }}">Modify</a></td>
+    </tr>
+{% endfor %}

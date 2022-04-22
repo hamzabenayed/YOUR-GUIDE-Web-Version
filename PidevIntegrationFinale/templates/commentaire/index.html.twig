@@ -1,0 +1,37 @@
+{% extends 'base-back.html.twig' %}
+
+{% block content %}
+    <h1>Commentaire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description_commentaire</th>
+                <th>Date_commentaire</th>
+
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commentaire in commentaires %}
+            <tr>
+                <td>{{ commentaire.id }}</td>
+                <td>{{ commentaire.descriptionCommentaire }}</td>
+                <td>{{ commentaire.dateCommentaire }}</td>
+{# <td>{{ commentaire.like }}</td>#}
+                <td>
+                    <a href="{{ path('commentaire_show', {'id': commentaire.id}) }}" type="button" class="btn btn-success waves-effect waves-light">show</a>
+                    <a href="{{ path('commentaire_edit', {'id': commentaire.id}) }}" type="button" class="btn btn-primary waves-effect waves-light">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('commentaire_new') }}" type="button" class="btn btn-primary waves-effect waves-light">Create new</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base-front.html.twig' %}
+{% block stylesheets %}
+{{parent()}}
+{% endblock %}
+{% block corp %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+{% block body %}
+    <form action="{{ path('login') }}" method="post">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="_username" value="{{ last_username }}"/>
+
+        <label for="mdp">Mot de passe:</label>
+        <input type="password" id="mdp" name="_password"/>
+
+        {# If you want to control the URL the user is redirected to on success
+        <input type="hidden" name="_target_path" value="/account"/> #}
+
+        <button type="submit"   >login</button>
+
+{% endblock %}
+{% endblock %}
