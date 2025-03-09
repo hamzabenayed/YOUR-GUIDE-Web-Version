@@ -2,7 +2,7 @@
 
 namespace App\Controller\Mobile;
 
-use App\Entity\ Produit;
+use App\Entity\Produit;
 use App\Repository\ProduitRepository;
 use App\Repository\CategoryRepository;
 use DateTime;

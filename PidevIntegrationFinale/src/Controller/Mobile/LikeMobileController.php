@@ -2,9 +2,9 @@
 
 namespace App\Controller\Mobile;
 
-use App\Entity\ Like;
-use App\Repository\ LikeRepository;
-use App\Repository\ CommentaireRepository;
+use App\Entity\Like;
+use App\Repository\LikeRepository;
+use App\Repository\CommentaireRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

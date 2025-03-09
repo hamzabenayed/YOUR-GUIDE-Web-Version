@@ -1,8 +1,9 @@
 <?php
 namespace App\Controller\Mobile;
 
-use App\Entity\ Guide;
-use App\Repository\ GuideRepository;use App\Repository\ ActiviteRepository;
+use App\Entity\Guide;
+use App\Repository\GuideRepository;
+use App\Repository\ActiviteRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller\Mobile;
 
-use App\Entity\ TypeActivite;
-use App\Repository\ TypeActiviteRepository;
+use App\Entity\TypeActivite;
+use App\Repository\TypeActiviteRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

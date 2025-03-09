@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller\Mobile;
 
-use App\Entity\ Category;
-use App\Repository\ CategoryRepository;
+use App\Entity\Category;
+use App\Repository\CategoryRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

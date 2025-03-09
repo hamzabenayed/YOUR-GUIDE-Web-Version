@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller\Mobile;
 
-use App\Entity\ Reclamation;
-use App\Repository\ ReclamationRepository;
+use App\Entity\Reclamation;
+use App\Repository\ReclamationRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

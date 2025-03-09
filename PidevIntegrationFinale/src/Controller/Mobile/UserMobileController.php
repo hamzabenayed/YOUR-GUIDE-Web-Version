@@ -2,8 +2,8 @@
 
 namespace App\Controller\Mobile;
 
-use App\Entity\ User;
-use App\Repository\ UserRepository;
+use App\Entity\User;
+use App\Repository\UserRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Swift_Mailer;

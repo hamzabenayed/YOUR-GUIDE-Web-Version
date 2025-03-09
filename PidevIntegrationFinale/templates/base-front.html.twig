@@ -74,13 +74,14 @@
                                     </div>
                                 </li>
                             </ul><a class="button button-md button-default-outline-2 button-ujarak" href="{{ path("reclamation_new") }}">Envoyer une Reclamation</a>
-                            <p class="positionned">{% if "IS_AUTHENTICATED_FULLY" %}
+                            <p class="positionned">
+                                {% if "IS_AUTHENTICATED_FULLY" %}
                                     {% set user = app.user %}
 
                                 {% else %}
                                     {% set user = "no user connected" %}
                                 {% endif %}
-                                {% set nom =  user.nom %}
+                     {% set nom = app.user.nom|default("no user connected") %}
                                 {{ nom }}
 
                             </p>
