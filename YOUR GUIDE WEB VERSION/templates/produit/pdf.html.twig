@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <select id="cat">
+        <option>Select categroy...</option>
+
+        {% for catg in catgs %}
+            {% if cc is defined and cc == catg.nom %}
+                <option selected>
+                    {{ catg.nom }}
+                </option>
+            {% else %}
+                <option>
+                    {{ catg.nom }}
+                </option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <script>
+        var activities = document.getElementById("cat");
+        activities.addEventListener("change", function() {
+            location.href="/home/products/" + activities.value;
+        });
+    </script>
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Prix</th>
+            <th>Image</th>
+        </tr>
+        {% for produit in products %}
+            <tr>
+
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.description }}</td>
+                <td>{{ produit.prix }}</td>
+                <td><img width="512px" height="512px" src="{{ produit.image }}" class="img-fluid" alt="Responsive image"/></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

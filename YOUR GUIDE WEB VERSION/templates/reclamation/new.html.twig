@@ -1,0 +1,15 @@
+{% extends 'base-front.html.twig' %}
+
+{% block content %}
+    {% for message in app.flashes('info') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <h1>Envoyer une Reclamation</h1>
+    <br>
+    <br><br><br><br>
+    {{ include('reclamation/_form.html.twig') }}
+
+
+{% endblock %}

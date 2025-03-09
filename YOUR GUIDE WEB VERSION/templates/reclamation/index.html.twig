@@ -1,0 +1,43 @@
+{% extends 'base-back.html.twig' %}
+
+
+
+{% block content %}
+
+    <h1>Reclamation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date_reclamation</th>
+                <th>Type_reclamation</th>
+                <th>Desc_reclamation</th>
+                <th>etat</th>
+                <th>actions</th>
+                <th>etat</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td>{{ reclamation.id }}</td>
+                <td>{{ reclamation.dateReclamation }}</td>
+                <td>{{ reclamation.typeReclamation }}</td>
+                <td>{{ reclamation.descReclamation }}</td>
+                <td>{{ reclamation.etat }}</td>
+                <td>
+                    <a href="{{ path('reclamation_show', {'id': reclamation.id}) }}">show</a>
+                    <a href="{{ path('reclamation_edit', {'id': reclamation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('reclamation_new') }}">Create new</a>
+{% endblock %}
